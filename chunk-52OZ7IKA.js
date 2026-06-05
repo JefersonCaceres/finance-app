@@ -1,0 +1,1 @@
+import{Ba as n,Va as t,Wa as r,bb as o}from"./chunk-N2LZT2ZC.js";var s=class a{static \u0275fac=function(e){return new(e||a)};static \u0275cmp=n({type:a,selectors:[["app-calendar"]],decls:2,vars:0,template:function(e,i){e&1&&(t(0,"p"),o(1,"calendar works!"),r())},encapsulation:2})};export{s as Calendar};

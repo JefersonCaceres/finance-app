@@ -1,0 +1,1 @@
+import{Ba as a,Va as o,Wa as n,bb as s}from"./chunk-N2LZT2ZC.js";var i=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=a({type:t,selectors:[["app-goals"]],decls:2,vars:0,template:function(e,p){e&1&&(o(0,"p"),s(1,"goals works!"),n())},encapsulation:2})};export{i as Goals};

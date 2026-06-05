@@ -1,0 +1,101 @@
+{
+  "configVersion": 1,
+  "timestamp": 1780669205136,
+  "index": "/finance-app/index.csr.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/finance-app/chunk-52OZ7IKA.js",
+        "/finance-app/chunk-FF5G54PL.js",
+        "/finance-app/chunk-JE4ZUI67.js",
+        "/finance-app/chunk-N2LZT2ZC.js",
+        "/finance-app/chunk-N5O5XO33.js",
+        "/finance-app/chunk-QJ52K6IR.js",
+        "/finance-app/chunk-QJJGB62M.js",
+        "/finance-app/chunk-QNUBJXF2.js",
+        "/finance-app/chunk-RLJJLR3W.js",
+        "/finance-app/chunk-WO42H5TE.js",
+        "/finance-app/chunk-ZKMCZL6Z.js",
+        "/finance-app/favicon.ico",
+        "/finance-app/index.csr.html",
+        "/finance-app/index.html",
+        "/finance-app/main-XTN3GGDF.js",
+        "/finance-app/manifest.webmanifest",
+        "/finance-app/styles-OPUTW5UJ.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/finance-app/icons/icon-128x128.png",
+        "/finance-app/icons/icon-144x144.png",
+        "/finance-app/icons/icon-152x152.png",
+        "/finance-app/icons/icon-192x192.png",
+        "/finance-app/icons/icon-384x384.png",
+        "/finance-app/icons/icon-512x512.png",
+        "/finance-app/icons/icon-72x72.png",
+        "/finance-app/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/finance-app/chunk-52OZ7IKA.js": "362414d5b969afe97923ad5d5f4b5ec4eee4a44d",
+    "/finance-app/chunk-FF5G54PL.js": "e2f67fe89decab5ef67e7dabaaa20c5b7504f690",
+    "/finance-app/chunk-JE4ZUI67.js": "78b1ed8e7d34a95f6b33c041046acef4731d82c9",
+    "/finance-app/chunk-N2LZT2ZC.js": "0c5f01f8dd8582220e67af5a2f287c77aecd75c7",
+    "/finance-app/chunk-N5O5XO33.js": "22055db2decf58da25a7ca21b0fae3c0ccf10bbe",
+    "/finance-app/chunk-QJ52K6IR.js": "06939049752c45b6a309b707b20f125a3872466b",
+    "/finance-app/chunk-QJJGB62M.js": "804ded9cf91a84cf0dc42c3fa46a3ce682510875",
+    "/finance-app/chunk-QNUBJXF2.js": "1b0960eb92567a976381b399ddd43863721ec4d9",
+    "/finance-app/chunk-RLJJLR3W.js": "5213c496acc2ec05da1c214a16c1d29191591986",
+    "/finance-app/chunk-WO42H5TE.js": "89bdc66948a8fcebeaa0eb9fdfdf7d1364c71c70",
+    "/finance-app/chunk-ZKMCZL6Z.js": "6e9f1e16c354fbd7e44559f17a2754a274a7db57",
+    "/finance-app/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
+    "/finance-app/icons/icon-128x128.png": "f912963bdc6d5a38d8f1dd0afbaab2ce8d657acb",
+    "/finance-app/icons/icon-144x144.png": "b155fd5f2fd5d2ea7760721063003c4cd95fd783",
+    "/finance-app/icons/icon-152x152.png": "eae6e0f0c8afb8aaae339e2a569b43e9238e5e6c",
+    "/finance-app/icons/icon-192x192.png": "15c4180454633880d98674aa7394656196c91584",
+    "/finance-app/icons/icon-384x384.png": "94a915751ef6c9282df9aea405ad679230631814",
+    "/finance-app/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
+    "/finance-app/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
+    "/finance-app/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
+    "/finance-app/index.csr.html": "a74eaf9a0fde1510bec6b3341f56e4d89f41fb11",
+    "/finance-app/index.html": "61669ce1eee5b988f109fdd4d2e1af7af485e1ad",
+    "/finance-app/main-XTN3GGDF.js": "8857c8348e0c5b30f6d411be38a9b5d5e818bafe",
+    "/finance-app/manifest.webmanifest": "03d2edb1c3b585f94ca77543956f6d6809b89d90",
+    "/finance-app/styles-OPUTW5UJ.css": "0918ee8e18cf383756264e2ddad6eea59484ea1f"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
