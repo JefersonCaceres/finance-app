@@ -97,4 +97,22 @@ export class Expenses {
   private loadExpenses(): void {
     this.expenses = this.storage.get<Expense[]>(STORAGE_KEYS.EXPENSES) || [];
   }
+
+
+  deleteOldExpenses(): void {
+  const expenses = this.storage.get<Expense[]>(STORAGE_KEYS.EXPENSES) ?? [];
+
+  const today = new Date();
+
+  const validExpenses = expenses.filter(expense => {
+    const expenseDate = new Date(expense.date);
+
+    const diffInDays =
+      (today.getTime() - expenseDate.getTime()) / (1000 * 60 * 60 * 24);
+
+    return diffInDays <= 90;
+  });
+
+  this.storage.save(STORAGE_KEYS.EXPENSES, validExpenses);
+}
 }
