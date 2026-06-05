@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1780675919534,
+  "timestamp": 1780683803800,
   "index": "/finance-app/index.csr.html",
   "assetGroups": [
     {
@@ -19,12 +19,12 @@
         "/finance-app/chunk-N5O5XO33.js",
         "/finance-app/chunk-PMGZAVI6.js",
         "/finance-app/chunk-PP3U6MK2.js",
-        "/finance-app/chunk-RPNVBJK3.js",
-        "/finance-app/chunk-UY53CKDB.js",
+        "/finance-app/chunk-UYDTFVTX.js",
+        "/finance-app/chunk-WYEDPD76.js",
         "/finance-app/favicon.ico",
         "/finance-app/index.csr.html",
         "/finance-app/index.html",
-        "/finance-app/main-OTAKSVPY.js",
+        "/finance-app/main-TBM7GAX6.js",
         "/finance-app/manifest.webmanifest",
         "/finance-app/styles-OPUTW5UJ.css"
       ],
@@ -60,8 +60,8 @@
     "/finance-app/chunk-N5O5XO33.js": "22055db2decf58da25a7ca21b0fae3c0ccf10bbe",
     "/finance-app/chunk-PMGZAVI6.js": "7d8816d6cc9b86a28e23201348bb0891d1657f14",
     "/finance-app/chunk-PP3U6MK2.js": "844ddac094eed1e5e76910a798c989c4c0459211",
-    "/finance-app/chunk-RPNVBJK3.js": "c5e12ecb0eeb9c20e59ad3bdb553f840c371ea97",
-    "/finance-app/chunk-UY53CKDB.js": "b0febd155f44a1482b7919608cbab1bc51c5eedf",
+    "/finance-app/chunk-UYDTFVTX.js": "5a2b04124a989fe37a7005a957452bb3a3d931a1",
+    "/finance-app/chunk-WYEDPD76.js": "bad60589e3e964a20cd054b8f10ab62e7da347eb",
     "/finance-app/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
     "/finance-app/icons/icon-128x128.png": "f912963bdc6d5a38d8f1dd0afbaab2ce8d657acb",
     "/finance-app/icons/icon-144x144.png": "b155fd5f2fd5d2ea7760721063003c4cd95fd783",
@@ -71,9 +71,9 @@
     "/finance-app/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
     "/finance-app/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
     "/finance-app/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
-    "/finance-app/index.csr.html": "a78e8e0a75a947be15be56362959d72a0e782c89",
-    "/finance-app/index.html": "c9535a24d5f8d93d5352d03d9ad24866f2ad2437",
-    "/finance-app/main-OTAKSVPY.js": "ff7937d1fb2f2a89ff644669a22dcf0016a89eaa",
+    "/finance-app/index.csr.html": "47a8b77a0dd42c60bc8c895e28d1a233b4c778a6",
+    "/finance-app/index.html": "ab74af2080657014cd729c069aa69aedbbfa2432",
+    "/finance-app/main-TBM7GAX6.js": "50f247e163c75aa186a9ff75d0f1587a48a55c6a",
     "/finance-app/manifest.webmanifest": "03d2edb1c3b585f94ca77543956f6d6809b89d90",
     "/finance-app/styles-OPUTW5UJ.css": "0918ee8e18cf383756264e2ddad6eea59484ea1f"
   },
