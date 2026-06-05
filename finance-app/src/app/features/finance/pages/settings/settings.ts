@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CurrencyPipe } from '@angular/common';
+import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { Storage } from '../../services/storage';
 import { Settings as SettingsModel } from '../../models/settings.model';
@@ -23,15 +24,15 @@ export class Settings {
   salaryIncome = 0;
   extraIncome = 0;
   paymentDay = 25;
+  
 
   fixedExpenseName = '';
   fixedExpenseAmount = 0;
 
   fixedExpenses: FixedExpense[] = [];
 
-  constructor(private storage: Storage) {
-    this.loadData();
-  }
+  constructor( private storage: Storage, private router: Router) 
+  {this.loadData();}
 
   addFixedExpense(): void {
     if (!this.fixedExpenseName || this.fixedExpenseAmount <= 0) {
@@ -67,6 +68,7 @@ export class Settings {
   }
 
   saveSettings(): void {
+
     const settings: SettingsModel = {
       salaryIncome: this.salaryIncome,
       extraIncome: this.extraIncome,
@@ -76,6 +78,8 @@ export class Settings {
 
     this.storage.save(STORAGE_KEYS.SETTINGS, settings);
     this.storage.save(STORAGE_KEYS.FIXED_EXPENSES, this.fixedExpenses);
+
+    this.router.navigate(['/']);
   }
 
   private loadData(): void {

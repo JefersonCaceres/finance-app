@@ -1,3 +1,5 @@
+
+
 @if (!configured) {
 
   <section class="welcome-card">
@@ -16,18 +18,27 @@
 
   <section class="dashboard">
 
-    <p class="greeting">Hola Jefferson 👋</p>
+    <div class="dashboard-greeting-row">
+      <p class="greeting">Hola Jefferson 👋</p>
+
+      <button
+        class="settings-button"
+        type="button"
+        routerLink="/settings">
+        ⚙️
+      </button>
+    </div>
 
     <h1>Puedes gastar hoy</h1>
 
     <div class="daily-amount">
-      {{ dailyAvailable | currency:'COP':'symbol':'1.0-0' }}
+      {{ dailyAvailable | currency:'COP ':'symbol':'1.0-0' }}
     </div>
 
     <div class="summary-card">
       <span>Disponible este mes</span>
       <strong>
-        {{ monthlyAvailable | currency:'COP':'symbol':'1.0-0' }}
+        {{ monthlyAvailable | currency:'COP ':'symbol':'1.0-0' }}
       </strong>
     </div>
 
