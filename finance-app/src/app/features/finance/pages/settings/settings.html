@@ -1,43 +1,68 @@
-<h2>Configuración financiera</h2>
+<div class="settings-page">
 
-<section>
-  <h3>Ingresos</h3>
+  <header class="settings-header">
+    <h2>Configuración financiera</h2>
+    <p>Define tus ingresos y gastos fijos para calcular tu presupuesto diario.</p>
+  </header>
 
-  <label>Salario mensual</label>
-  <input type="number" [(ngModel)]="salaryIncome">
+  <section class="settings-card">
+    <h3>Ingresos</h3>
 
-  <label>Ingreso extra mensual</label>
-  <input type="number" [(ngModel)]="extraIncome">
+    <div class="form-field">
+      <label>Salario mensual</label>
+      <input type="number" [(ngModel)]="salaryIncome" placeholder="Ej: 6040000">
+    </div>
 
-  <label>Día de pago</label>
-  <input type="number" [(ngModel)]="paymentDay">
-</section>
+    <div class="form-field">
+      <label>Ingreso extra mensual</label>
+      <input type="number" [(ngModel)]="extraIncome" placeholder="Ej: 500000">
+    </div>
 
-<section>
-  <h3>Gastos fijos</h3>
+    <div class="form-field">
+      <label>Día de pago</label>
+      <input type="number" [(ngModel)]="paymentDay" min="1" max="31">
+    </div>
+  </section>
 
-  <label>Nombre</label>
-  <input type="text" [(ngModel)]="fixedExpenseName">
+  <section class="settings-card">
+    <h3>Gastos fijos</h3>
 
-  <label>Valor</label>
-  <input type="number" [(ngModel)]="fixedExpenseAmount">
+    <div class="form-field">
+      <label>Nombre del gasto</label>
+      <input type="text" [(ngModel)]="fixedExpenseName" placeholder="Ej: Arriendo">
+    </div>
 
-  <button type="button" (click)="addFixedExpense()">
-    Agregar gasto fijo
+    <div class="form-field">
+      <label>Valor</label>
+      <input type="number" [(ngModel)]="fixedExpenseAmount" placeholder="Ej: 1050000">
+    </div>
+
+    <button class="secondary-button" type="button" (click)="addFixedExpense()">
+      Agregar gasto fijo
+    </button>
+
+    <div class="fixed-expenses-list">
+      @if (fixedExpenses.length === 0) {
+        <p class="empty-message">Aún no tienes gastos fijos registrados.</p>
+      }
+
+      @for (expense of fixedExpenses; track expense.id) {
+        <div class="fixed-expense-item">
+          <div>
+            <span>{{ expense.name }}</span>
+            <strong>{{ expense.amount | currency:'COP $':'symbol':'1.0-0' }}</strong>
+          </div>
+
+          <button type="button" (click)="removeFixedExpense(expense.id)">
+            Eliminar
+          </button>
+        </div>
+      }
+    </div>
+  </section>
+
+  <button class="save-button" type="button" (click)="saveSettings()">
+    Guardar configuración
   </button>
 
-  @for (expense of fixedExpenses; track expense.id) {
-    <div>
-      <span>{{ expense.name }}</span>
-      <strong>{{ expense.amount | currency:'COP':'symbol':'1.0-0' }}</strong>
-
-      <button type="button" (click)="removeFixedExpense(expense.id)">
-        Eliminar
-      </button>
-    </div>
-  }
-</section>
-
-<button type="button" (click)="saveSettings()">
-  Guardar configuración
-</button>
+</div>
