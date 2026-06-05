@@ -1,0 +1,67 @@
+@if (!configured) {
+
+  <section class="welcome-card">
+    <h2>Bienvenido</h2>
+
+    <p>
+      Necesitamos algunos datos para calcular cuánto puedes gastar cada día.
+    </p>
+
+    <button routerLink="/settings">
+      Configurar aplicación
+    </button>
+  </section>
+
+} @else {
+
+  <section class="dashboard">
+
+    <p class="greeting">Hola Jefferson 👋</p>
+
+    <h1>Puedes gastar hoy</h1>
+
+    <div class="daily-amount">
+      {{ dailyAvailable | currency:'COP':'symbol':'1.0-0' }}
+    </div>
+
+    <div class="summary-card">
+      <span>Disponible este mes</span>
+      <strong>
+        {{ monthlyAvailable | currency:'COP':'symbol':'1.0-0' }}
+      </strong>
+    </div>
+
+    <div class="summary-card">
+      <span>Días restantes</span>
+      <strong>{{ remainingDays }} días</strong>
+    </div>
+
+    <div class="summary-card">
+      <span>Estado financiero</span>
+      <strong>{{ status }}</strong>
+    </div>
+
+  <section class="latest-expenses">
+    <h3 class="section-title">Últimos gastos</h3>
+
+    <div class="expenses-list">
+      @for (expense of latestExpenses; track expense.id) {
+        <div class="expense-item">
+          <span class="expense-category">{{ expense.description }}</span>
+          <strong class="expense-amount">
+            {{ expense.amount | currency:'COP ':'symbol':'1.0-0' }}
+          </strong>
+        </div>
+      } @empty {
+        <p class="empty-state">No tienes gastos registrados.</p>
+      }
+    </div>
+  </section>
+
+  <button class="floating-button" routerLink="/expenses">
+    +
+  </button>
+
+  </section>
+
+}

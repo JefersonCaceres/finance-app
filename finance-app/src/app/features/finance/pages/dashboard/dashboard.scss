@@ -1,0 +1,116 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  padding: 24px;
+  background: #f5f5f5;
+  font-family: system-ui, -apple-system, sans-serif; 
+}
+
+.welcome-card,
+.dashboard {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.welcome-card {
+  background: white;
+  padding: 24px;
+  border-radius: 20px;
+}
+
+.greeting {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.daily-amount {
+  margin: 20px 0;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.summary-card {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 16px;
+  border-radius: 16px;
+  margin-bottom: 12px;
+}
+
+.floating-button {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: none;
+  font-size: 32px;
+}
+
+
+.latest-expenses {
+  background: white;
+  padding: 20px;      
+  border-radius: 16px;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02); 
+}
+
+.section-title {
+  margin: 0 0 16px 0; 
+  font-size: 16px;
+  font-weight: 600;
+  color: #666666;      
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 13px;     
+}
+
+.expenses-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #f2f2f2; 
+}
+
+
+.expense-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.expense-item:first-child {
+  padding-top: 0;
+}
+
+.expense-category {
+  font-size: 15px;
+  color: #333333;
+  font-weight: 500;
+}
+
+.expense-amount {
+  font-size: 15px;
+  color: #b42e2e; 
+  font-weight: 600;
+}
+
+.empty-state {
+  margin: 8px 0 0 0;
+  color: #999999;
+  font-size: 14px;
+  text-align: center;
+}

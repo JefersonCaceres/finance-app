@@ -1,0 +1,263 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  padding: 24px;
+  background: #f5f5f5;
+}
+
+h2, h3 {
+  margin-top: 0;
+}
+
+section {
+  max-width: 420px;
+  margin: 0 auto 20px;
+  background: white;
+  padding: 16px;
+  border-radius: 18px;
+}
+
+.summary-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary-card strong {
+  font-size: 22px;
+}
+
+.category-item,
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.category-item:last-child,
+.expense-item:last-child {
+  border-bottom: none;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  font-weight: 600;
+}
+.history-section {
+  max-width: 450px;
+  margin: 0 auto;
+  font-family: system-ui, sans-serif;
+}
+
+.expense-item {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border: 1px solid #f0f0f0;
+}
+
+.expense-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.expense-category {
+  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 1.05rem;
+}
+
+.expense-amount {
+  font-weight: 700;
+  color: #dc3545; /* Rojo para gastos */
+}
+
+.expense-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.expense-description {
+  margin: 0;
+  color: #555555;
+  font-size: 0.95rem;
+}
+
+.expense-date {
+  font-size: 0.8rem;
+  color: #8c8c8c;
+}
+
+.expense-actions {
+  display: flex;
+  justify-content: flex-end; /* Lleva el botón a la derecha */
+  border-top: 1px solid #f9f9f9;
+  padding-top: 8px;
+}
+
+.btn-delete {
+  background: transparent;
+  border: none;
+  color: #8c8c8c;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s;
+}
+
+.btn-delete:hover {
+  color: #dc3545; 
+}
+
+.page-header {
+  max-width: 420px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.page-header button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+.quick-categories {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  margin: 10px 0 16px;
+  padding-bottom: 6px;
+}
+
+.quick-categories button {
+  width: auto;
+  white-space: nowrap;
+  padding: 10px 14px;
+  border-radius: 999px;
+}
+
+.quick-categories button.active {
+  font-weight: 700;
+  border: 2px solid #222;
+}
+.quick-payment-methods {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0 16px;
+}
+
+.quick-payment-methods button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 999px;
+}
+
+.quick-payment-methods button.active {
+  font-weight: 700;
+  border: 2px solid #222;
+}
+
+.history-section {
+  max-width: 420px;
+  margin: 0 auto 20px;
+}
+
+.history-title {
+  margin-bottom: 12px;
+}
+
+.expense-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.expense-item {
+  background: white;
+  border-radius: 18px;
+  padding: 16px;
+}
+
+.expense-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.expense-category {
+  font-weight: 700;
+}
+
+.expense-amount {
+  font-weight: 700;
+}
+
+.text-danger {
+  color: #b42318;
+}
+
+.expense-body {
+  margin-bottom: 12px;
+}
+
+.expense-description {
+  margin: 0 0 6px;
+}
+
+.expense-no-description {
+  display: block;
+  margin-bottom: 6px;
+  color: #777;
+}
+
+.expense-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 12px;
+  color: #777;
+}
+
+.expense-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-delete {
+  width: auto;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.expense-empty {
+  background: white;
+  border-radius: 18px;
+  padding: 16px;
+  text-align: center;
+  color: #777;
+}

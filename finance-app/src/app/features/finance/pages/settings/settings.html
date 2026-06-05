@@ -1,0 +1,43 @@
+<h2>Configuración financiera</h2>
+
+<section>
+  <h3>Ingresos</h3>
+
+  <label>Salario mensual</label>
+  <input type="number" [(ngModel)]="salaryIncome">
+
+  <label>Ingreso extra mensual</label>
+  <input type="number" [(ngModel)]="extraIncome">
+
+  <label>Día de pago</label>
+  <input type="number" [(ngModel)]="paymentDay">
+</section>
+
+<section>
+  <h3>Gastos fijos</h3>
+
+  <label>Nombre</label>
+  <input type="text" [(ngModel)]="fixedExpenseName">
+
+  <label>Valor</label>
+  <input type="number" [(ngModel)]="fixedExpenseAmount">
+
+  <button type="button" (click)="addFixedExpense()">
+    Agregar gasto fijo
+  </button>
+
+  @for (expense of fixedExpenses; track expense.id) {
+    <div>
+      <span>{{ expense.name }}</span>
+      <strong>{{ expense.amount | currency:'COP':'symbol':'1.0-0' }}</strong>
+
+      <button type="button" (click)="removeFixedExpense(expense.id)">
+        Eliminar
+      </button>
+    </div>
+  }
+</section>
+
+<button type="button" (click)="saveSettings()">
+  Guardar configuración
+</button>

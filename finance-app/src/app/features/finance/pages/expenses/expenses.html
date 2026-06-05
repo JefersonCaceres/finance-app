@@ -1,0 +1,130 @@
+<header class="page-header">
+  <button type="button" routerLink="/">
+    ←
+  </button>
+
+  <h2>Gastos</h2>
+</header>
+<h2>Registrar gasto</h2>
+<section class="summary-card">
+  <span>Total gastado</span>
+  <strong>{{ totalExpenses | currency:'COP $':'symbol':'1.0-0' }}</strong>
+</section>
+
+<div class="quick-categories">
+  @for (categoryItem of categories; track categoryItem) {
+    <button
+      type="button"
+      [class.active]="category === categoryItem"
+      (click)="category = categoryItem">
+      {{ categoryItem }}
+    </button>
+  }
+</div>
+
+<section class="category-summary">
+  <h3>Gasto por categoría</h3>
+
+  @for (item of categorySummary; track item.category) {
+    <div class="category-item">
+      <span>{{ item.category }}</span>
+      <strong>{{ item.total | currency:'COP $':'symbol':'1.0-0' }}</strong>
+    </div>
+  } @empty {
+    <p>Aún no tienes gastos registrados.</p>
+  }
+</section>
+<section>
+  <label>Valor</label>
+  <input type="number" [(ngModel)]="amount">
+
+  <label>Categoría</label>
+  <select [(ngModel)]="category">
+    @for (category of categories; track category) {
+      <option [value]="category">{{ category }}</option>
+    }
+  </select>
+
+    <label>Medio de pago</label>
+
+    <div class="quick-payment-methods">
+    <button
+        type="button"
+        [class.active]="paymentMethod === 'CASH'"
+        (click)="paymentMethod = 'CASH'">
+        Efectivo
+    </button>
+
+    <button
+        type="button"
+        [class.active]="paymentMethod === 'NEQUI'"
+        (click)="paymentMethod = 'NEQUI'">
+        Nequi
+    </button>
+
+    <button
+        type="button"
+        [class.active]="paymentMethod === 'CARD_PAYMENT'"
+        (click)="paymentMethod = 'CARD_PAYMENT'">
+        Tarjeta
+    </button>
+    </div>
+
+  <label>Descripción</label>
+  <input type="text" [(ngModel)]="description">
+
+  <button type="button" (click)="saveExpense()">
+    Guardar gasto
+  </button>
+</section>
+
+<section class="history-section">
+  <h3 class="history-title">Historial de Gastos</h3>
+
+  <div class="expense-list">
+    @for (expense of expenses; track expense.id) {
+      <div class="expense-item">
+        
+        <!-- Fila Principal: Categoría y Monto -->
+        <div class="expense-header">
+          <span class="expense-category">{{ expense.category }}</span>
+          <span class="expense-amount text-danger">
+            {{ expense.amount | currency:'COP $':'symbol':'1.0-0' }}
+          </span>
+        </div>
+
+        <!-- Fila Secundaria: Descripción opcional y Fecha -->
+        <div class="expense-body">
+        @if (expense.description) {
+            <p class="expense-description">{{ expense.description }}</p>
+        } @else {
+            <span class="expense-no-description">Sin descripción</span>
+        }
+
+        <div class="expense-meta">
+            <time class="expense-date">
+            {{ expense.date | date:'dd/MM/yyyy • HH:mm' }}
+            </time>
+
+            <span class="expense-payment">
+            {{ getPaymentMethodLabel(expense.paymentMethod) }}
+            </span>
+        </div>
+        </div>
+
+        <!-- Acciones: Botón de eliminar más sutil o icono -->
+        <div class="expense-actions">
+          <button type="button" class="btn-delete" (click)="deleteExpense(expense.id)" aria-label="Eliminar gasto">
+            <!-- Puedes usar un texto sutil o un icono de basura -->
+            <span class="icon-trash">🗑️</span> Eliminar
+          </button>
+        </div>
+
+      </div>
+    } @empty {
+      <div class="expense-empty">
+        <p>No tienes gastos registrados todavía.</p>
+      </div>
+    }
+  </div>
+</section>
