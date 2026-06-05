@@ -19,6 +19,9 @@ export class Dashboard {
 
   monthlyAvailable = 0;
   dailyAvailable = 0;
+  displayDailyAvailable = 0;
+  isOverBudget = false;
+  userName = '';
   remainingDays = 0;
   status = '🟢 Vas bien';
   latestExpenses: Expense[] = [];
@@ -60,6 +63,9 @@ this.monthlyAvailable = totalIncome - totalFixedExpenses - totalExpenses;
     this.dailyAvailable = this.remainingDays > 0
       ? Math.floor(this.monthlyAvailable / this.remainingDays)
       : this.monthlyAvailable;
+    this.isOverBudget = this.monthlyAvailable < 0;
+    this.displayDailyAvailable = Math.max(0, this.dailyAvailable);  
+    this.userName = settings?.userName || 'Usuario';
 
     this.status = this.getStatus();
   }

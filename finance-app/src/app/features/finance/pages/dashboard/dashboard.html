@@ -19,7 +19,7 @@
   <section class="dashboard">
 
     <div class="dashboard-greeting-row">
-      <p class="greeting">Hola Jefferson 👋</p>
+      <p class="greeting">Hola {{ userName }} 👋</p>
 
       <button
         class="settings-button"
@@ -32,8 +32,14 @@
     <h1>Puedes gastar hoy</h1>
 
     <div class="daily-amount">
-      {{ dailyAvailable | currency:'COP ':'symbol':'1.0-0' }}
+      {{ displayDailyAvailable | currency:'COP':'symbol':'1.0-0' }}
     </div>
+
+    @if (isOverBudget) {
+      <p class="budget-warning">
+        Ya superaste tu presupuesto mensual.
+      </p>
+    }
 
     <div class="summary-card">
       <span>Disponible este mes</span>

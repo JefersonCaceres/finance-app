@@ -5,22 +5,30 @@
     <p>Define tus ingresos y gastos fijos para calcular tu presupuesto diario.</p>
   </header>
 
+  <div class="form-field">
+    <label>Tu nombre</label>
+    <input
+      type="text"
+      [(ngModel)]="userName"
+      placeholder="Ej: Jefferson">
+  </div>
+
   <section class="settings-card">
     <h3>Ingresos</h3>
 
     <div class="form-field">
       <label>Salario mensual</label>
-      <input type="number" [(ngModel)]="salaryIncome" placeholder="Ej: 6040000">
+      <input type="number" min="0" [(ngModel)]="salaryIncome" placeholder="Ej: 6040000">
     </div>
 
     <div class="form-field">
       <label>Ingreso extra mensual</label>
-      <input type="number" [(ngModel)]="extraIncome" placeholder="Ej: 500000">
+      <input type="number" min="0" [(ngModel)]="extraIncome" placeholder="Ej: 500000">
     </div>
 
     <div class="form-field">
       <label>Día de pago</label>
-      <input type="number" [(ngModel)]="paymentDay" min="1" max="31">
+      <input type="number" min="1" [(ngModel)]="paymentDay" min="1" max="31">
     </div>
   </section>
 

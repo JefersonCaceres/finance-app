@@ -24,7 +24,7 @@ export class Settings {
   salaryIncome = 0;
   extraIncome = 0;
   paymentDay = 25;
-  
+  userName = '';
 
   fixedExpenseName = '';
   fixedExpenseAmount = 0;
@@ -70,6 +70,7 @@ export class Settings {
   saveSettings(): void {
 
     const settings: SettingsModel = {
+      userName: this.userName.trim(),
       salaryIncome: this.salaryIncome,
       extraIncome: this.extraIncome,
       paymentDay: this.paymentDay,
@@ -87,6 +88,7 @@ export class Settings {
     const fixedExpenses = this.storage.get<FixedExpense[]>(STORAGE_KEYS.FIXED_EXPENSES);
 
     if (settings) {
+      this.userName = settings.userName;
       this.salaryIncome = settings.salaryIncome;
       this.extraIncome = settings.extraIncome;
       this.paymentDay = settings.paymentDay;
