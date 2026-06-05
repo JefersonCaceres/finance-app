@@ -50,6 +50,18 @@ export class Settings {
     this.fixedExpenseAmount = 0;
   }
 
+  resetApplication(): void {
+
+    const confirmed = confirm(
+      'Se eliminarán todos los datos almacenados en la aplicación.'
+    );
+
+    if (confirmed) {
+      this.storage.clear();
+      location.reload();
+    }
+  }
+
   removeFixedExpense(id: string): void {
     this.fixedExpenses = this.fixedExpenses.filter(expense => expense.id !== id);
   }

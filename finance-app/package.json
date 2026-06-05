@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:finance-app": "node dist/finance-app/server/server.mjs"
+    "serve:ssr:finance-app": "node dist/finance-app/server/server.mjs",
+    "deploy": "ng build --configuration production --base-href /finance-app/ && angular-cli-ghpages --dir=dist/finance-app/browser"
   },
   "private": true,
   "packageManager": "npm@11.12.1",
